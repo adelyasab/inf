@@ -1,0 +1,9 @@
+SELECT DISTINCT maker 
+FROM Product INNER JOIN PC ON Product.model=PC.model
+WHERE ram = (SELECT MIN(ram) FROM PC)
+AND speed = (SELECT MAX(speed) FROM PC 
+WHERE ram = (SELECT MIN(ram) FROM PC))
+INTERSECT 
+SELECT DISTINCT maker 
+FROM Product 
+WHERE type = 'Printer'

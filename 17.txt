@@ -1,3 +1,0 @@
-SELECT DISTINCT type, Product.model as mode, speed 
-FROM Laptop INNER JOIN Product ON Product.model=Laptop.model 
-WHERE speed<(SELECT MIN(speed) as mini FROM PC)

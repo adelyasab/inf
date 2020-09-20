@@ -1,4 +1,0 @@
-SELECT count(*) 
-FROM ( SELECT maker FROM Product 
-GROUP BY maker 
-HAVING count(model)=1 ) as Q

@@ -1,0 +1,3 @@
+SELECT DISTINCT A.model AS p1, B.model AS p2, A.speed, B.ram
+FROM PC AS A,  PC AS B 
+WHERE A.speed=B.speed AND A.ram=B.ram AND A.model>B.model

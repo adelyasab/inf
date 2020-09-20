@@ -1,7 +1,0 @@
-SELECT distinct maker 
-WHERE maker in (SELECT maker from Product 
-WHERE type='PC' 
-except
-SELECT maker
-FROM Product 
-WHERE type='Laptop')

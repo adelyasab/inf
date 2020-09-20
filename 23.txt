@@ -1,7 +1,0 @@
-SELECT maker
-FROM PC INNER JOIN Product ON Product.model=PC.model
-WHERE speed>=750
-INTERSECT
-SELECT maker
-FROM Laptop INNER JOIN Product ON Product.model=Laptop.model
-WHERE speed>=750

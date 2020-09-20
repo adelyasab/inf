@@ -1,7 +1,0 @@
-WITH newt (model,price) AS (SELECT model,price FROM PC
-UNION
-SELECT model,price FROM Printer
-UNION
-SELECT model,price FROM Laptop)
-SELECT model FROM newt
-WHERE price=(SELECT MAX(price) AS maxi FROM newt)

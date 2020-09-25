@@ -795,7 +795,7 @@ true posixrules
       <ObjectId>13318</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>507</IntrospectionStateNumber>
+      <IntrospectionStateNumber>517</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16394|16396|1
 sequence|table|16402|16404|1
@@ -850,7 +850,7 @@ sequence|table|16402|16404|1
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>508</IntrospectionStateNumber>
+      <IntrospectionStateNumber>518</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="16" parent="3" name="heap">
@@ -946,9 +946,9 @@ sequence|table|16402|16404|1
       <StateNumber>493</StateNumber>
     </table>
     <table id="32" parent="15" name="dannie">
-      <ObjectId>24592</ObjectId>
+      <ObjectId>24598</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>506</StateNumber>
+      <StateNumber>516</StateNumber>
     </table>
     <table id="33" parent="15" name="driver">
       <ObjectId>16396</ObjectId>
@@ -1005,13 +1005,25 @@ sequence|table|16402|16404|1
       <RefKeyName>driver_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="41" parent="32" name="name">
+    <column id="41" parent="32" name="firstname">
       <Position>1</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>506</StateNumber>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>516</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="42" parent="33" name="id">
+    <column id="42" parent="32" name="secondname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>516</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="43" parent="32" name="email">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>516</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="44" parent="33" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1019,32 +1031,32 @@ sequence|table|16402|16404|1
       <DefaultExpression>nextval(&apos;driver_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="43" parent="33" name="first_name">
+    <column id="45" parent="33" name="first_name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <StateNumber>491</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="33" name="last_name">
+    <column id="46" parent="33" name="last_name">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <StateNumber>491</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="45" parent="33" name="age">
+    <column id="47" parent="33" name="age">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>491</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="46" parent="33" name="driver_pkey">
+    <index id="48" parent="33" name="driver_pkey">
       <ObjectId>16400</ObjectId>
       <StateNumber>491</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="47" parent="33" name="driver_pkey">
+    <key id="49" parent="33" name="driver_pkey">
       <ObjectId>16401</ObjectId>
       <StateNumber>491</StateNumber>
       <ColNames>id</ColNames>

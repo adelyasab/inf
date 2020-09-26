@@ -1,0 +1,4 @@
+ru\itis\models\User.class
+ru\itis\servlets\UsersServlet.class
+ru\itis\models\User$UserBuilder.class
+ru\itis\servlets\SimpleHTMLServlet.class

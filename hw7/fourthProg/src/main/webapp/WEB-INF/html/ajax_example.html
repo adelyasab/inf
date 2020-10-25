@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+
+    </script>
+</head>
+<body>
+<script>
+    function renderTable(users, table){
+        let innerHTML =
+        '<tr>\n' +
+        '    <th>firstname</th>' +
+        '    <th>lastname</th>' +
+        '</tr>';
+        for (let i = 0; i < users.length; i++) {
+            innerHTML += '<tr>';
+            innerHTML += '  <td>' + users[i]['firstname'] + '</td>';
+            innerHTML += '  <td>' + users[i]['lastname'] + '</td>';
+            innerHTML += '</tr>';
+        }
+        table.html(innerHTML);
+
+    }
+    function sendUser(firstname, lastname) {
+        let data = {
+            "firstname": firstname,
+            "lastname": lastname
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "/ajax",
+            data: JSON.stringify(data),
+            success: function (response){
+                renderTable(response, $('#table'))
+            },
+            dataType: "json",
+            contentType: "application/json"
+        });
+    }
+</script>
+<div>
+    <input type="text" id="first_name">
+    <input type="text" id="last_name">
+    <button onclick="sendUser($('#first_name').val(), $('#last_name').val())">Send</button>
+</div>
+<div>
+    <table id = "table">
+
+    </table>
+</div>
+</body>
+</html>

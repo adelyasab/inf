@@ -1,0 +1,15 @@
+.game-search-wrapper {
+    -fx-background-color: #2e3348;
+    -fx-pref-width: 1000px;
+    -fx-pref-height: 600px;
+    -fx-alignment: center;
+    -fx-column-halignment: center;
+    -fx-orientation: vertical;
+}
+
+.game-search__text {
+    -fx-font-family: "Agency FB";
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fafafa;
+}

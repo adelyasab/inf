@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.FlowPane?>
+
+
+<?import java.net.URL?>
+<FlowPane fx:controller="ru.itis.client.controllers.Menu" alignment="TOP_CENTER" columnHalignment="CENTER" orientation="VERTICAL" styleClass="mainMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@../css/menu.css" />
+   </stylesheets>
+   <children>
+      <Button styleClass="button" text="Button" />
+      <Button onMouseClicked="#exit" fx:id="exitMenuButton"  styleClass="button" text="Exit" />
+   </children>
+</FlowPane>

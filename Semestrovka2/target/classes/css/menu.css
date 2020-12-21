@@ -1,0 +1,40 @@
+.app-header {
+    -fx-pref-height: 70px;
+    -fx-padding: 10px 0 0 15px;
+}
+
+.title {
+    -fx-font-family: "Agency FB";
+    -fx-font-size: 100px;
+    -fx-font-weight: bold;
+}
+
+.page {
+    -fx-background-color: #2e3348;
+}
+
+.intro{
+    -fx-alignment: top_center;
+    -fx-column-halignment: center;
+    -fx-orientation: vertical;
+
+    -fx-pref-height: 800px;
+    -fx-pref-width: 500px;
+}
+
+.button {
+    -fx-background-color:  #e63619;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 56px;
+
+    -fx-font-family: "Agency FB";
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+
+    -fx-cursor: open_hand;
+
+    /*mragins*/
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}

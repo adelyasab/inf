@@ -1,0 +1,11 @@
+.map-boundary{
+    -fx-border-width: 5px;
+    -fx-border-color: #404040;
+    -fx-border-style: solid;
+}
+
+.map-wrapper{
+    -fx-alignment: center;
+    -fx-column-halignment: center;
+    -fx-orientation: horizontal;
+}

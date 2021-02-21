@@ -8,4 +8,8 @@ public interface UsersService {
     public List<UserDto> getAllUsers();
 
     UserDto getUser(Long userId);
+
+    void confirmUserWithCode(String code);
+
+    String getNameByCode(String code);
 }

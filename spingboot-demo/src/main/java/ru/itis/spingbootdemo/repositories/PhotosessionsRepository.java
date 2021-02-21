@@ -11,4 +11,5 @@ public interface PhotosessionsRepository extends JpaRepository<Photosession, Lon
 
     List<Photosession> findAllByPriceIsBefore(int price);
     List<Photosession> findAllByPriceIsBeforeAndType(int price, String type);
+
 }

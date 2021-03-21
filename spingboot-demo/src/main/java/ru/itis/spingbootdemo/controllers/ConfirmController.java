@@ -17,6 +17,6 @@ public class ConfirmController {
     public String confirmUser(@PathVariable("code") String code, Model model) {
         usersService.confirmUserWithCode(code);
         model.addAttribute("name", usersService.getNameByCode(code));
-        return "confirm";
+        return "confirm_page";
     }
 }

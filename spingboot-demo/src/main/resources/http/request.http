@@ -1,1 +1,9 @@
-GET localhost:8080/photosessions/all/10000
+POST localhost/users/3/articles
+Content-Type: application/json
+
+{
+"text" : "it will be good3"
+}
+
+###
+POST http://localhost/users/2/articles/5/like

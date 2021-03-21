@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="account")
@@ -26,4 +27,22 @@ public class User {
 
     @Enumerated(value = EnumType.STRING)
     private State state;
+
+    @OneToMany(mappedBy = "author")
+    private List<Article> createdArticles;
+
+    @ManyToMany(mappedBy = "likes")
+    private List<Article> likedArticles;
+
+    //указывает, какое поле в объекте владельце соответствует владеемому объекту
+    @OneToMany(mappedBy = "user")
+    private List<Photosession> photosessions;
+
+    @OneToMany(mappedBy = "customer")
+    private List<Application> inputApplications;
+
+    @OneToMany(mappedBy = "owner")
+    private List<Application> outputApplications;
+
+    private Role role;
 }
